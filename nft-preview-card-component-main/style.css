@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line-color: hsl(215, 32%, 27%);
+    font-family: 'Outfit', sans-serif;
+    color: white;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-bg);
+    display: grid;
+    place-content: center;
+}
+
+.mainDIV{
+    background-color: var(--card-bg);
+    width: 320px;
+    aspect-ratio: 1/1.4;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.theImages{
+    height: 70%;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.theImages #image-equilibrium{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 0;
+}
+.theImages #icon-view{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 1;
+    object-fit: none;
+    background: hsl(178deg 100% 50% / 40%);
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.theImages #icon-view:hover{
+    opacity: 1;
+}
+
+.mainDIV h3, p{
+    margin-bottom: 10px;
+    transition: .4s ease;
+}
+.mainDIV h3:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+.mainDIV p{
+    color: var(--soft-blue);
+}
+
+.moreInfo{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.moreInfo > div{
+    display: flex;
+    align-content: center;
+}
+.moreInfo > div > img{
+    margin-right: 10px;
+}
+
+.moreInfo .balance span{
+    color: var(--cyan);
+    font-weight: bold;
+}
+.moreInfo .time span{
+    color: var(--soft-blue);
+    /* font-weight: bold; */
+}
+
+hr{
+    background-color: var(--line-color);
+    border: none;
+    width: 100%;
+    height: 1px;
+}
+
+.mainDIV .account{
+    width: 100%;
+    height: 80px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.mainDIV .account img{
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+}
+.mainDIV .account span{
+    color: var(--soft-blue);
+}
+.mainDIV .account span span{
+    color: white;
+    transition: .4s ease;
+}
+
+.mainDIV .account span span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
